@@ -7,7 +7,8 @@ export { default as transitiveClosure } from './transitiveClosure';
 export { default as bruteForceStringSearch } from './bruteForceStringSearch';
 export { default as quickSortM3 } from './quickSortM3';
 export { default as horspoolStringSearch } from './horspoolStringSearch';
-export { default as unionFindUnion } from './unionFindUnion';
-export { default as unionFindFind } from './unionFindFind';
-export { default as TTFTreeInsertion } from './TTFTreeInsertion';
-export { default as TTFTreeSearch } from './TTFTreeSearch';
+export { default as dijkstra} from './dijkstra';
+export { default as AStar } from './AStar';
+export { default as BFS } from './BFS';
+export { default as DFS } from './DFS';
+

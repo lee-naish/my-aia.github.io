@@ -24,11 +24,13 @@
       fill: var(--graph-node-id-fill);
       dominant-baseline: central;
       text-anchor: middle;
+      font-size: 35px; // font size for labels inside nodes
     }
 
     .weight {
       fill: var(--graph-node-weight-fill);
       font-weight: bold;
+      font-size: 15px;
       alignment-baseline: central;
       text-anchor: left;
     }
@@ -103,13 +105,33 @@
       .id {
         fill: var(--graph-node-id-fill-visited);
       }
-    }
+    } 
+
+    &.visited3 {
+      .circle {
+        fill: var(--graph-node-circle-fill-visited3);
+        stroke: var(--graph-node-circle-stroke-visited3);
+      }
+      .id {
+        fill: var(--graph-node-id-fill-visited);
+      }
+    } 
+
+    &.visited4 {
+      .circle {
+        fill: var(--graph-node-circle-fill-visited4);
+        stroke: var(--graph-node-circle-stroke-visited4);
+      }
+      .id {
+        fill: var(--graph-node-id-fill-visited);
+      }
+    } 
   }
 
   .edge {
     .line {
       stroke: var(--graph-edge-line-stroke);
-      stroke-width: 3.5;
+      stroke-width: 2.5;
       fill: none;
 
       &.directed {
@@ -121,7 +143,8 @@
       fill: var(--graph-edge-line-weight-fill);
       alignment-baseline: baseline;
       text-anchor: middle;
-      font-size: 24px;
+      // font-size: 15px;
+      font-size: 35px;
     }
 
     &.selected {
@@ -184,7 +207,36 @@
       .weight {
         fill: var(--graph-edge-weight-fill-visited2);
       }
-    }
+    } 
+
+    &.visited3 {
+      .line {
+        stroke: var(--graph-edge-line-stroke-visited3);
+
+        &.directed {
+          marker-end: url(#markerArrowVisited3);
+        }
+      }
+
+      .weight {
+        fill: var(--graph-edge-weight-fill-visited3);
+      }
+    } 
+
+    &.visited4 {
+      .line {
+        stroke: var(--graph-edge-line-stroke-visited4);
+
+        &.directed {
+          marker-end: url(#markerArrowVisited4);
+        }
+      }
+
+      .weight {
+        fill: var(--graph-edge-weight-fill-visited4);
+      }
+    } 
+
   }
 
   .arrow {
@@ -204,6 +256,29 @@
 
     &.visited2 {
       fill: var(--graph-arrow-fill-visited2);
+    } 
+
+    &.visited3 {
+      fill: var(--graph-arrow-fill-visited3);
+    }
+    &.visited4 {
+      fill: var(--graph-arrow-fill-visited4);
     }
   }
+
+
+  // X, Y axis
+  .axis {
+    stroke: var(--axis);
+    stroke-width: 1;
+    fill: none;
+
+  }
+
+  .axisLabel {
+    // font-size: 15px;
+    font-size: 35px;
+    font-weight: 1;
+  }
+
 }
